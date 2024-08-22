@@ -1,10 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Email Sender</title>
+    <link rel="stylesheet" href="Receiver.css">
 </head>
 <body>
-$END$
+        <div class="main">
+            <form onsubmit="sendEmail(); reset(); return false">
+                <h3> Get In Touch Using Email</h3>
+                <input type="text" id="name" placeholder="Enter Your Name" required>
+                <input type="email" id="email" placeholder="Enter Email id" required>
+                <input type="text" id="phone.no" placeholder="Enter Your Contact" required>
+                <textarea id="message" rows="4" placeholder="how can we help you?"></textarea>
+                <button type="submit"> Send </button>
+            </form>
+
+        </div>
+
+            <script src=" https://smtpjs.com/v3/smtp.js"></script>
+
+            <script>
+                function sendEmail() {
+                    Email.send({
+                            Host: "smtp.gmail.com",
+                            Username: "akintoyetoluwalase912@gmail.com",
+                             Password: "toluak@28",
+                            To: 'akinoba125@gmail.com',
+                            From: document.getElementById("email").value,
+                            Subject: "Approval Of Admmission Into Tech",
+                            Body: "name" + document.getElementById("name").value
+                        + "<br>email" + document.getElementById("name").value
+                        + "<br>phone no" + document.getElementById("phone.no").value
+                                + "<br>message" + document.getElementById("message").value
+                        }).then(
+                        message => alert("Email Message Sent Successfully")
+                    );
+                }
+            </script>
 </body>
 </html>

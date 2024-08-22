@@ -1,0 +1,76 @@
+*{
+    font-family:"poppins", sans-serif ;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+.mainContainer{
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgb(5, 5, 94);
+    padding: 10px;
+}
+.myList{
+    /*width: 50%;*/
+    max-width: 540px;
+    background-color: #fff;
+    margin: 100px auto 20px;
+    padding: 40px  70px 30px;
+    border-radius: 20px;
+}
+.myList h2{
+    color: #002765;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.myList h2 img{
+    width: 50px;
+    height: 25px;
+}
+.row{
+    display: flex;
+    padding-left: 20px;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    border-radius: 30px;
+}
+.input-box{
+    flex: 1;
+    border: none;
+    outline: none;
+    background-color: rgb(61, 61, 100);
+    padding: 10px 20px;
+    font-weight:20;
+    color: #86be7d;
+    font-size: 15px;
+    border-radius: 15px;
+}
+.input-Button {
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    color: #05055e;
+    background-color: #ff5945;
+    cursor: pointer;
+    font-size: 15px;
+    border-radius: 15px;
+    position: relative;
+}
+
+ul li {
+    list-style: none;
+    font-size: 20px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+
+ul li input[type="checkbox"] {
+    position: absolute;
+    left: 0;
+    top: 12px;
+}
